@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.sool",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|then|else|begin|end|let|letrec|in|proc|untuple|caseT|class|extends|field|method|self|super|new|interface|implements)\\b"
 			}]
 		},
 		"strings": {
