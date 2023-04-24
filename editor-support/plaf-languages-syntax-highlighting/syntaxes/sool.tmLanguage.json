@@ -6,25 +6,73 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#variables"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#types"
+		},
+		{
 			"include": "#strings"
 		}
 	],
 	"repository": {
+		// https://macromates.com/manual/en/language_grammars#naming_conventions
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.sool",
-				"match": "\\b(if|then|else|begin|end|let|letrec|in|proc|untuple|caseT|class|extends|field|method|self|super|new|interface|implements)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.sool",
+					"match": "\\b(if|then|else)\\b"
+				},
+				{
+					"name": "keyword.storage.sool",
+					"match": "\\b(let|letrec|class|interface|field|newref|setref|deref)\\b"
+				},
+				{
+					"name": "keyword.other.sool",
+					"match": "\\b(begin|end|in|proc|untuple|caseT|extends|method|new|interface|implements)\\b"
+				}
+			]
 		},
+
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.sool",
+					"match": "\\b(self|super)\\b"
+				}
+			]
+		},
+		
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.sool",
+					"match": "\\b(empty\\?|zero\\?|hd|tl|cons)\\b"
+				}
+			]
+		},
+
+		"types": {
+			"patterns": [
+				{
+					"name": "support.type.sool",
+					"match": "\\b(unit|bool|int|list|tree|ref)\\b"
+				}
+			]
+		},
+		
 		"strings": {
 			"name": "string.quoted.double.sool",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
-				{
-					"name": "constant.character.escape.sool",
-					"match": "\\\\."
-				}
+				// {
+				// 	"name": "constant.character.escape.sool",
+				// 	"match": "\\\\."
+				// }
 			]
 		}
 	},
