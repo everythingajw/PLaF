@@ -1,0 +1,25 @@
+{
+  "name": "plaf-languages-syntax-highlighting",
+  "displayName": "PLaF Languages Syntax Highlighting",
+  "description": "Syntax highlighting for the languages used in CS 496.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "sool",
+      "aliases": ["Sool", "sool"],
+      "extensions": [".sool"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "sool",
+      "scopeName": "source.sool",
+      "path": "./syntaxes/sool.tmLanguage.json"
+    }]
+  }
+}
