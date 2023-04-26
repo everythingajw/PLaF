@@ -1,29 +1,150 @@
 {
-  "name": "plaf-languages-syntax-highlighting",
-  "displayName": "PLaF Languages Syntax Highlighting",
-  "description": "Syntax highlighting for the languages used in CS 496.",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.77.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "sool",
-        "aliases": ["Sool", "sool"],
-        "extensions": [".sool"],
-        "configuration": "./language-configuration.json"
-      }
+    "name": "plaf-languages-syntax-highlighting",
+    "displayName": "PLaF Languages Syntax Highlighting",
+    "description": "Syntax highlighting for the languages used in CS 496.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.77.0"
+    },
+    "categories": [
+        "Programming Languages"
     ],
-    "grammars": [
-      {
-        "language": "sool",
-        "scopeName": "source.sool",
-        "path": "./syntaxes/sool.tmLanguage.json"
-      }
-    ]
-  }
+    "contributes": {
+        "languages": [
+            {
+                "id": "arith",
+                "aliases": ["Arith", "arith"],
+                "extensions": [".arith"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "call-by-name",
+                "aliases": ["Call-by-name", "call-by-name"],
+                "extensions": [".cbname"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "call-by-need",
+                "aliases": ["Call-by-need", "call-by-need"],
+                "extensions": [".cbneed"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "call-by-reference",
+                "aliases": ["Call-by-reference", "call-by-reference"],
+                "extensions": [".cbref"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "checked",
+                "aliases": ["Checked", "checked"],
+                "extensions": [".chk"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "explicit-refs",
+                "aliases": ["Explicit-refs", "explicit-refs"],
+                "extensions": [".eref"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "implicit-refs",
+                "aliases": ["Implicit-refs", "implicit-refs"],
+                "extensions": [".iref"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "let",
+                "aliases": ["Let", "let"],
+                "extensions": [".let"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "proc",
+                "aliases": ["Proc", "proc"],
+                "extensions": [".proc"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "rec",
+                "aliases": ["Rec", "rec"],
+                "extensions": [".rec"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "simple-modules",
+                "aliases": ["Simple-modules", "simple-modules"],
+                "extensions": [".smod"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "sool",
+                "aliases": ["Sool","sool"],
+                "extensions": [".sool"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "arith",
+                "scopeName": "source.arith",
+                "path": "./syntaxes/arith.tmLanguage.json"
+            },
+            {
+                "language": "call-by-name",
+                "scopeName": "source.cbname",
+                "path": "./syntaxes/call-by-name.tmLanguage.json"
+            },
+            {
+                "language": "call-by-need",
+                "scopeName": "source.cbneed",
+                "path": "./syntaxes/call-by-need.tmLanguage.json"
+            },
+            {
+                "language": "call-by-reference",
+                "scopeName": "source.cbref",
+                "path": "./syntaxes/call-by-reference.tmLanguage.json"
+            },
+            {
+                "language": "checked",
+                "scopeName": "source.chk",
+                "path": "./syntaxes/checked.tmLanguage.json"
+            },
+            {
+                "language": "explicit-refs",
+                "scopeName": "source.eref",
+                "path": "./syntaxes/explicit-refs.tmLanguage.json"
+            },
+            {
+                "language": "implicit-refs",
+                "scopeName": "source.iref",
+                "path": "./syntaxes/implicit-refs.tmLanguage.json"
+            },
+            {
+                "language": "let",
+                "scopeName": "source.let",
+                "path": "./syntaxes/let.tmLanguage.json"
+            },
+            {
+                "language": "proc",
+                "scopeName": "source.proc",
+                "path": "./syntaxes/proc.tmLanguage.json"
+            },
+            {
+                "language": "rec",
+                "scopeName": "source.rec",
+                "path": "./syntaxes/rec.tmLanguage.json"
+            },
+            {
+                "language": "simple-modules",
+                "scopeName": "source.smod",
+                "path": "./syntaxes/simple-modules.tmLanguage.json"
+            },
+            {
+                "language": "sool",
+                "scopeName": "source.sool",
+                "path": "./syntaxes/sool.tmLanguage.json"
+            }
+        ]
+    }
 }
