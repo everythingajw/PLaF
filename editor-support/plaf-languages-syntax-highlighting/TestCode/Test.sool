@@ -1,0 +1,73 @@
+(* -*- sool -*- *)
+
+class MyClassC extends SomeObject
+{
+    field myField
+    method sampleMethod()
+    {
+
+    }
+}
+
+let x = if zero?(5) then "six" else "7"
+in let y = 10
+x
+
+(* keyword.control.sool *)
+if
+then
+else
+
+(* keyword.storage.sool *)
+let
+letrec
+class
+interface
+field
+newref
+setref
+deref
+
+(* keyword.other.sool *)
+begin
+end
+in
+proc
+untuple
+caseT
+extends
+method
+new
+interface
+implements
+
+(* constant.numeric.sool *)
+1
+1234
+0
+99999999999
+5418164545
+-0
+-156
+-1
+-9999999999999
+
+
+(* variable.language.sool *)
+self
+super
+
+(* support.function.sool *)
+empty?
+zero?
+hd
+tl
+cons
+
+(* support.type.sool *)
+unit
+bool
+int
+list
+tree
+ref
