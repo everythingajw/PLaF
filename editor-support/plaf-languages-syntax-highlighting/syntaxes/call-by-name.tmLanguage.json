@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Call-by-name",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.call-by-name",
+					"match": "\\b(if|then|else)\\b"
+				},
+				{
+					"name": "keyword.storage.call-by-name",
+					"match": "\\b(let|letrec|class|interface|field|newref|setref|deref)\\b"
+				},
+				{
+					"name": "keyword.other.call-by-name",
+					"match": "\\b(begin|end|in|proc|untuple|caseT|extends|method|new|interface|implements)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.call-by-name",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.call-by-name",
+					"match": "\\b(self|super)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.call-by-name",
+					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "support.type.call-by-name",
+					"match": "\\b(unit|bool|int|list|tree|ref)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.call-by-name",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.call-by-name",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.cbname"
+}
