@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Rec",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.rec",
+					"match": "\\b(if|then|else)\\b"
+				},
+				{
+					"name": "keyword.storage.rec",
+					"match": "\\b(let|letrec)\\b"
+				},
+				{
+					"name": "keyword.other.rec",
+					"match": "\\b(begin|end|in|proc)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.rec",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.rec",
+					"match": "\\b(zero\\?)\\W"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.rec",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rec",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.rec"
+}
