@@ -10,16 +10,20 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "sool",
-      "aliases": ["Sool", "sool"],
-      "extensions": [".sool"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "sool",
-      "scopeName": "source.sool",
-      "path": "./syntaxes/sool.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "sool",
+        "aliases": ["Sool", "sool"],
+        "extensions": [".sool"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sool",
+        "scopeName": "source.sool",
+        "path": "./syntaxes/sool.tmLanguage.json"
+      }
+    ]
   }
 }

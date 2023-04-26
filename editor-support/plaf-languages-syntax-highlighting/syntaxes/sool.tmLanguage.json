@@ -6,6 +6,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#constants"
+		},
+		{
 			"include": "#variables"
 		},
 		{
@@ -19,7 +22,6 @@
 		}
 	],
 	"repository": {
-		// https://macromates.com/manual/en/language_grammars#naming_conventions
 		"keywords": {
 			"patterns": [
 				{
@@ -36,7 +38,14 @@
 				}
 			]
 		},
-
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.sool",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
 		"variables": {
 			"patterns": [
 				{
@@ -45,16 +54,14 @@
 				}
 			]
 		},
-		
 		"functions": {
 			"patterns": [
 				{
 					"name": "support.function.sool",
-					"match": "\\b(empty\\?|zero\\?|hd|tl|cons)\\b"
+					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
 				}
 			]
 		},
-
 		"types": {
 			"patterns": [
 				{
@@ -63,16 +70,15 @@
 				}
 			]
 		},
-		
 		"strings": {
 			"name": "string.quoted.double.sool",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
-				// {
-				// 	"name": "constant.character.escape.sool",
-				// 	"match": "\\\\."
-				// }
+				{
+					"name": "constant.character.escape.sool",
+					"match": "\\\\."
+				}
 			]
 		}
 	},
