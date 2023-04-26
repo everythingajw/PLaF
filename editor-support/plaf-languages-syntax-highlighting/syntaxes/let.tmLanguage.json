@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Let",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.let",
+					"match": "\\b(if|then|else)\\b"
+				},
+				{
+					"name": "keyword.storage.let",
+					"match": "\\b(let)\\b"
+				},
+				{
+					"name": "keyword.other.let",
+					"match": "\\b(in)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.let",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.let",
+					"match": "\\b((zero\\?)\\W)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.let",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.let",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.let"
+}
