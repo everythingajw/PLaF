@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Call-by-need",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.call-by-need",
+					"match": "\\b(if|then|else)\\b"
+				},
+				{
+					"name": "keyword.storage.call-by-need",
+					"match": "\\b(let|letrec|class|interface|field|newref|setref|deref)\\b"
+				},
+				{
+					"name": "keyword.other.call-by-need",
+					"match": "\\b(begin|end|in|proc|untuple|caseT|extends|method|new|interface|implements)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.call-by-need",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.call-by-need",
+					"match": "\\b(self|super)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.call-by-need",
+					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "support.type.call-by-need",
+					"match": "\\b(unit|bool|int|list|tree|ref)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.call-by-need",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.call-by-need",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.cbneed"
+}
