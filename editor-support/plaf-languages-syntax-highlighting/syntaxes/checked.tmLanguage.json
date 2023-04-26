@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Checked",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.checked",
+					"match": "\\b(if|then|else)\\b"
+				},
+				{
+					"name": "keyword.storage.checked",
+					"match": "\\b(let|letrec|class|interface|field|newref|setref|deref)\\b"
+				},
+				{
+					"name": "keyword.other.checked",
+					"match": "\\b(begin|end|in|proc|untuple|caseT|extends|method|new|interface|implements)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.checked",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.checked",
+					"match": "\\b(self|super)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.checked",
+					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "support.type.checked",
+					"match": "\\b(unit|bool|int|list|tree|ref)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.checked",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.checked",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.chk"
+}
