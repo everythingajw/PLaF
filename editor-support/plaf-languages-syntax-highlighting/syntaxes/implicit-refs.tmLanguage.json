@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Implicit-refs",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.implicit-refs",
+					"match": "\\b(if|then|else)\\b"
+				},
+				{
+					"name": "keyword.storage.implicit-refs",
+					"match": "\\b(let|letrec|set)\\b"
+				},
+				{
+					"name": "keyword.other.implicit-refs",
+					"match": "\\b(begin|end|in|proc|untuple|caseT)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.implicit-refs",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.implicit-refs",
+					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.implicit-refs",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.implicit-refs",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.iref"
+}
