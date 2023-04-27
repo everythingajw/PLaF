@@ -9,13 +9,10 @@
 			"include": "#constants"
 		},
 		{
-			"include": "#variables"
-		},
-		{
 			"include": "#functions"
 		},
 		{
-			"include": "#types"
+			"include": "#variables"
 		},
 		{
 			"include": "#strings"
@@ -26,15 +23,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.sool",
-					"match": "\\b(if|then|else)\\b"
+					"match": "\\b(if|then|else|caseT)\\b"
 				},
 				{
 					"name": "keyword.storage.sool",
-					"match": "\\b(let|letrec|class|interface|field|newref|setref|deref)\\b"
+					"match": "\\b(let|letrec|pair|unpair|untuple|set|new|class|extends|field|method)\\b"
 				},
 				{
 					"name": "keyword.other.sool",
-					"match": "\\b(begin|end|in|proc|untuple|caseT|extends|method|new|interface|implements)\\b"
+					"match": "\\b(begin|end|in|of|proc|send)\\b"
 				}
 			]
 		},
@@ -46,27 +43,19 @@
 				}
 			]
 		},
-		"variables": {
-			"patterns": [
-				{
-					"name": "variable.language.sool",
-					"match": "\\b(self|super)\\b"
-				}
-			]
-		},
 		"functions": {
 			"patterns": [
 				{
 					"name": "support.function.sool",
-					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
+					"match": "\\b(((zero\\?|empty\\?)\\W)|((debug|fst|snd|cons|hd|tl|emptylist|node|emptytree|mklist)\\b))"
 				}
 			]
 		},
-		"types": {
+		"variables": {
 			"patterns": [
 				{
-					"name": "support.type.sool",
-					"match": "\\b(unit|bool|int|list|tree|ref)\\b"
+					"name": "support.variable.sool",
+					"match": "\\b(self|super)\\b"
 				}
 			]
 		},
