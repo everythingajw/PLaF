@@ -9,13 +9,7 @@
 			"include": "#constants"
 		},
 		{
-			"include": "#variables"
-		},
-		{
 			"include": "#functions"
-		},
-		{
-			"include": "#types"
 		},
 		{
 			"include": "#strings"
@@ -26,15 +20,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.call-by-reference",
-					"match": "\\b(if|then|else)\\b"
+					"match": "\\b(if|then|else|caseT)\\b"
 				},
 				{
 					"name": "keyword.storage.call-by-reference",
-					"match": "\\b(let|letrec|class|interface|field|newref|setref|deref)\\b"
+					"match": "\\b(let|letrec|pair|unpair|untuple|set)\\b"
 				},
 				{
 					"name": "keyword.other.call-by-reference",
-					"match": "\\b(begin|end|in|proc|untuple|caseT|extends|method|new|interface|implements)\\b"
+					"match": "\\b(begin|end|in|of|proc)\\b"
 				}
 			]
 		},
@@ -46,27 +40,11 @@
 				}
 			]
 		},
-		"variables": {
-			"patterns": [
-				{
-					"name": "variable.language.call-by-reference",
-					"match": "\\b(self|super)\\b"
-				}
-			]
-		},
 		"functions": {
 			"patterns": [
 				{
 					"name": "support.function.call-by-reference",
-					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
-				}
-			]
-		},
-		"types": {
-			"patterns": [
-				{
-					"name": "support.type.call-by-reference",
-					"match": "\\b(unit|bool|int|list|tree|ref)\\b"
+					"match": "\\b(((zero\\?|empty\\?)\\W)|((debug|fst|snd|cons|hd|tl|emptylist|node|emptytree)\\b))"
 				}
 			]
 		},
