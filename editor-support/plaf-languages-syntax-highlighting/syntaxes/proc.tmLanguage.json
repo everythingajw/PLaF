@@ -20,7 +20,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.proc",
-					"match": "\\b(if|then|else)\\b"
+					"match": "\\b(if|then|else|caseT)\\b"
 				},
 				{
 					"name": "keyword.storage.proc",
@@ -28,7 +28,7 @@
 				},
 				{
 					"name": "keyword.other.proc",
-					"match": "\\b(in|proc)\\b"
+					"match": "\\b(in|of|proc)\\b"
 				}
 			]
 		},
@@ -44,7 +44,7 @@
 			"patterns": [
 				{
 					"name": "support.function.proc",
-					"match": "\\b(((zero\\?)\\W)|((debug|fst|snd)\\b))"
+					"match": "\\b(((zero\\?|empty\\?)\\W)|((debug|fst|snd|cons|hd|tl|emptylist|node|emptytree)\\b))"
 				}
 			]
 		},

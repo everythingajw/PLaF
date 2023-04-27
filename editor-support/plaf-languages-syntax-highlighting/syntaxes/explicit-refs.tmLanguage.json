@@ -20,15 +20,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.explicit-refs",
-					"match": "\\b(if|then|else)\\b"
+					"match": "\\b(if|then|else|caseT)\\b"
 				},
 				{
 					"name": "keyword.storage.explicit-refs",
-					"match": "\\b(let|letrec|newref|setref|deref)\\b"
+					"match": "\\b(let|letrec|pair|unpair|untuple|newref|setref|deref)\\b"
 				},
 				{
 					"name": "keyword.other.explicit-refs",
-					"match": "\\b(begin|end|in|proc|untuple|caseT)\\b"
+					"match": "\\b(begin|end|in|of|proc|caseT)\\b"
 				}
 			]
 		},
@@ -44,7 +44,7 @@
 			"patterns": [
 				{
 					"name": "support.function.explicit-refs",
-					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
+					"match": "\\b(((zero\\?|empty\\?)\\W)|((debug|fst|snd|cons|hd|tl|emptylist|node|emptytree)\\b))"
 				}
 			]
 		},

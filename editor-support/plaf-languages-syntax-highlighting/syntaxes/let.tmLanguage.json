@@ -20,7 +20,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.let",
-					"match": "\\b(if|then|else)\\b"
+					"match": "\\b(if|then|else|caseT)\\b"
 				},
 				{
 					"name": "keyword.storage.let",
@@ -28,7 +28,7 @@
 				},
 				{
 					"name": "keyword.other.let",
-					"match": "\\b(in)\\b"
+					"match": "\\b(in|of)\\b"
 				}
 			]
 		},
@@ -44,7 +44,7 @@
 			"patterns": [
 				{
 					"name": "support.function.let",
-					"match": "\\b(((zero\\?)\\W)|((debug|fst|snd)\\b))"
+					"match": "\\b(((zero\\?|empty\\?)\\W)|((debug|fst|snd|cons|hd|tl|emptylist|node|emptytree)\\b))"
 				}
 			]
 		},
