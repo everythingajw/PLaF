@@ -1,0 +1,11 @@
+(* -*- let -*- *)
+
+let v = if zero?(0) then 1 else "b" in v
+
+let
+in
+1
+12
+0
+"asdf"
+""
