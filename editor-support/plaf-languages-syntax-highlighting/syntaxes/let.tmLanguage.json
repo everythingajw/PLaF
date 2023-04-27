@@ -24,7 +24,7 @@
 				},
 				{
 					"name": "keyword.storage.let",
-					"match": "\\b(let)\\b"
+					"match": "\\b(let|pair|unpair|untuple)\\b"
 				},
 				{
 					"name": "keyword.other.let",
@@ -44,7 +44,7 @@
 			"patterns": [
 				{
 					"name": "support.function.let",
-					"match": "\\b((zero\\?)\\W)"
+					"match": "\\b(((zero\\?)\\W)|((debug|fst|snd)\\b))"
 				}
 			]
 		},
