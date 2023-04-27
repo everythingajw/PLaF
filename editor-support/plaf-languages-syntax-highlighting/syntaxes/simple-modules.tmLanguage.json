@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Simple-modules",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.simple-modules",
+					"match": "\\b(if|then|else|caseT)\\b"
+				},
+				{
+					"name": "keyword.storage.simple-modules",
+					"match": "\\b(let|letrec|pair|unpair|untuple|newref|setref|deref|from|take|module|interface|body)\\b"
+				},
+				{
+					"name": "keyword.other.simple-modules",
+					"match": "\\b(begin|end|in|of|proc|caseT)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns":[
+				{
+					"name": "constant.numeric.simple-modules",
+					"match": "-?[0-9]+"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.simple-modules",
+					"match": "\\b(((zero\\?|empty\\?)\\W)|((debug|fst|snd|cons|hd|tl|emptylist|node|emptytree)\\b))"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.simple-modules",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.simple-modules",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.smod"
+}
