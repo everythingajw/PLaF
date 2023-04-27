@@ -24,11 +24,11 @@
 				},
 				{
 					"name": "keyword.storage.rec",
-					"match": "\\b(let|letrec)\\b"
+					"match": "\\b(let|letrec|pair|unpair|untuple)\\b"
 				},
 				{
 					"name": "keyword.other.rec",
-					"match": "\\b(begin|end|in|proc)\\b"
+					"match": "\\b(in|proc)\\b"
 				}
 			]
 		},
@@ -44,7 +44,7 @@
 			"patterns": [
 				{
 					"name": "support.function.rec",
-					"match": "\\b(zero\\?)\\W"
+					"match": "\\b(((zero\\?)\\W)|((debug|fst|snd)\\b))"
 				}
 			]
 		},
