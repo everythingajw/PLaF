@@ -9,9 +9,6 @@
 			"include": "#constants"
 		},
 		{
-			"include": "#variables"
-		},
-		{
 			"include": "#functions"
 		},
 		{
@@ -26,15 +23,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.checked",
-					"match": "\\b(if|then|else)\\b"
+					"match": "\\b(if|then|else|caseT)\\b"
 				},
 				{
 					"name": "keyword.storage.checked",
-					"match": "\\b(let|letrec|class|interface|field|newref|setref|deref)\\b"
+					"match": "\\b(let|letrec|pair|unpair|untuple)\\b"
 				},
 				{
 					"name": "keyword.other.checked",
-					"match": "\\b(begin|end|in|proc|untuple|caseT|extends|method|new|interface|implements)\\b"
+					"match": "\\b(begin|end|in|of|proc)\\b"
 				}
 			]
 		},
@@ -46,19 +43,11 @@
 				}
 			]
 		},
-		"variables": {
-			"patterns": [
-				{
-					"name": "variable.language.checked",
-					"match": "\\b(self|super)\\b"
-				}
-			]
-		},
 		"functions": {
 			"patterns": [
 				{
 					"name": "support.function.checked",
-					"match": "\\b(((empty\\?|zero\\?)\\W)|((hd|tl|cons)\\b))"
+					"match": "\\b(((zero\\?|empty\\?)\\W)|((debug|fst|snd|cons|hd|tl|emptylist|node|emptytree)\\b))"
 				}
 			]
 		},
