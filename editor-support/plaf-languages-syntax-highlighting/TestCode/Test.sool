@@ -17,29 +17,28 @@ x
 if
 then
 else
+caseT
 
 (* keyword.storage.sool *)
 let
 letrec
+pair
+unpair
+untuple
+set
+new
 class
-interface
+extends
 field
-newref
-setref
-deref
+method
 
 (* keyword.other.sool *)
 begin
 end
 in
+of
 proc
-untuple
-caseT
-extends
-method
-new
-interface
-implements
+send
 
 (* constant.numeric.sool *)
 1
@@ -47,27 +46,21 @@ implements
 0
 99999999999
 5418164545
--0
--156
--1
--9999999999999
 
+(* support.function.sool *)
+zero?
+empty?
+debug
+fst
+snd
+cons
+hd
+tl
+emptylist
+node
+emptytree
+mklist
 
 (* variable.language.sool *)
 self
 super
-
-(* support.function.sool *)
-empty?
-zero?
-hd
-tl
-cons
-
-(* support.type.sool *)
-unit
-bool
-int
-list
-tree
-ref
